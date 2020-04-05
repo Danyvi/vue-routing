@@ -2,6 +2,7 @@ import Vue from 'vue'
 import VueRouter from 'vue-router'
 import Home from '@/views/Home.vue'
 import About from '@/views/About.vue'
+import ViewProfile from '@/views/ViewProfile'
 
 Vue.use(VueRouter)
 
@@ -15,7 +16,12 @@ Vue.use(VueRouter)
     path: '/about',
     name: 'About',
     component: About
-  }
+  },
+  {
+    path: '/profile/:user_id',
+    name: 'ViewProfile',
+    component: ViewProfile
+  },
 ]
 
 const router = new VueRouter({
